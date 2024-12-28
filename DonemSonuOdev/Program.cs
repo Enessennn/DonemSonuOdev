@@ -48,7 +48,7 @@
                 for (int i = 0; i < ogrenciSayisi; i++)
                 {
                     Console.Write($"{i + 1}. Öğrencinin Numarasını Giriniz: ");
-                    dizi[i + 1, 0] = int.Parse(Console.ReadLine()).ToString();
+                    dizi[i + 1, 0] = long.Parse(Console.ReadLine()).ToString();
                     Console.Write($"{i + 1}. Öğrencinin Adını Giriniz: ");
                     dizi[i + 1, 1] = Console.ReadLine().Trim();
 
