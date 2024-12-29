@@ -8,10 +8,10 @@
             string OverflowHata = "Girilen sayı değeri tanımlanamadı";
             string notDegeriHata = "Notu 0-100 aralığında girmelisiniz";
 
-            double vizeNotu = 0;
-            double finalNotu = 0;
+            double vize = 0;
+            double final = 0;
             double notOrtalama = 0;
-
+            
             double sinifNotOrtalama = 0;
             double enKucuk = 0;
             double enBuyuk = 0;
@@ -60,10 +60,10 @@
                         try
                         {
                             Console.Write($"{i + 1}. Öğrencinin Vize Notunu Giriniz: ");
-                            dizi[i + 1, 3] = Console.ReadLine();
-                            vizeNotu = Convert.ToDouble(dizi[i + 1, 3]);
+                            dizi[i + 1, 3] = Console.ReadLine().Trim();
+                            vize = Convert.ToDouble(dizi[i + 1, 3]);
 
-                            if (vizeNotu > 100 || vizeNotu < 0)
+                            if (vize > 100 || vize < 0)
                             {
                                 Console.WriteLine(notDegeriHata);
                             }
@@ -87,10 +87,10 @@
                         try
                         {
                             Console.Write($"{i + 1}. Öğrencinin Final Notunu Giriniz: ");
-                            dizi[i + 1, 4] = Console.ReadLine();
-                            finalNotu = Convert.ToDouble(dizi[i + 1, 4]);
+                            dizi[i + 1, 4] = Console.ReadLine().Trim();
+                            final = Convert.ToDouble(dizi[i + 1, 4]);
 
-                            if (finalNotu > 100 || finalNotu < 0)
+                            if (final > 100 || final< 0)
                             {
                                 Console.WriteLine(notDegeriHata);
                             }
@@ -109,7 +109,7 @@
                         }
                     }
 
-                    notOrtalama = vizeNotu * 0.40 + finalNotu * 0.60;
+                    notOrtalama = vize * 0.40 + final * 0.60;
                     dizi[i + 1, 5] = notOrtalama.ToString();
                     ortalamaToplam[i] = notOrtalama;
 
